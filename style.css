@@ -41,11 +41,14 @@ body {
 
 .loader span {
     position: absolute;
+    left: 0;
+    transform-origin: 150px;
     width: 60px;
     height: 60px;
     background: #fff;
     border-radius: 50%;
     animation: animate 5s ease-in-out infinite;
+    animation-delay: calc(0.15s * var(--i));
 }
 
 @keyframes animate {
@@ -58,7 +61,14 @@ body {
     40%, 70% {
         width: 40px;
         height: 40px;
-        transform: rotate(calc(360deg /)) translateX(120px);
+        transform: rotate(calc(360deg / 8 * var(--i)));
+        box-shadow: 0, 0, 0, 10px #fff;
+    }
+
+    0%, 10% {
+        width: 100px;
+        height: 100px;
+        transform: rotate(0deg) translateX(120px);
     }
 
 }
