@@ -37,6 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.25);
+    filter: url(#Gooey);
 }
 
 .loader span {
@@ -49,6 +50,7 @@ body {
     border-radius: 50%;
     animation: animate 5s ease-in-out infinite;
     animation-delay: calc(0.15s * var(--i));
+   
 }
 
 @keyframes animate {
@@ -71,4 +73,9 @@ body {
         transform: rotate(0deg) translateX(120px);
     }
 
+}
+
+svg {
+    width: 0;
+    height: 0;
 }
